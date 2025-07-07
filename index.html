@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+    <title>Job Application Tracker</title>
+</head>
+
+<body>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">
+        <i class="fas fa-briefcase"></i>
+        <h2>Job Application Tracker</h2>
+      </div>
+      <button id="addBtn">+ Add Job</button>
+    </nav>
+  </header>
+
+  <!-- Modal -->
+  <div class="job-modal" id="jobModal">
+    <div class="modal-content">
+      <h2>Add Job Applications</h2>
+      <i id="close-modal" class="fas fa-times"></i>
+      <form>
+        <label>Job Title</label>
+        <input type="text" id="jobTitle" />
+        <label>Company</label>
+        <input type="text" id="company" />
+        <label>Date Applied</label>
+        <input type="date" id="date" />
+        <label>Status</label>
+        <select id="statusSelect">
+          <option>Pending</option>
+          <option>Interview</option>
+          <option>Accepted</option>
+          <option>Rejected</option>
+        </select>
+        <div class="cancel-save">
+          <button type="button" id="cancel">Cancel</button>
+          <button type="button" id="save">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Counters -->
+  <div class="boxes">
+    <div class="box">
+      <h3>Total</h3>
+      <span id="total">0</span>
+    </div>
+    <div class="box">
+      <h3>Pending</h3>
+      <span id="pending">0</span>
+    </div>
+    <div class="box">
+      <h3>Interview</h3>
+      <span id="interview">0</span>
+    </div>
+    <div class="box">
+      <h3>Accepted</h3>
+      <span id="accepted">0</span>
+    </div>
+    <div class="box">
+      <h3>Rejected</h3>
+      <span id="rejected">0</span>
+    </div>
+  </div>
+
+  <!-- Search Filter -->
+  <div class="search">
+    <input type="text" id="search-input" placeholder="Search by job title or company..." />
+     <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+    <label for="status">Status :</label>
+    <select id="status">
+      <option value="all">All</option>
+      <option value="Pending">Pending</option>
+      <option value="Interview">Interview</option>
+      <option value="Accepted">Accepted</option>
+      <option value="Rejected">Rejected</option>
+    </select>
+  </div>
+
+  <!-- Job Applications Table -->
+  <div class="job-applications">
+      <table>
+        <thead>
+          <tr>
+            <th>Job Title</th>
+            <th>Company</th>
+            <th>Date Applied</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="jobTableBody"></tbody>
+      </table>
+
+      <!-- No Job Message -->
+      <div class="no-job">
+      <i class="fas fa-briefcase"></i>
+      <h3>No job applications yet</h3>
+      <p>Click "Add Job" to start tracking your applications</p>
+    </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
