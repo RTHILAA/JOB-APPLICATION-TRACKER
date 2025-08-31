@@ -165,10 +165,4 @@ Have questions or suggestions? Feel free to reach out:
 
 - **Author**: ANASS EL HARAZI
 - **Email**:  [anaswins35@gmail.com](mailto:anaswins35@gmail.com)
-- **GitHub**: [@RTHILAA](https://github.com/RTHILAA)
 - **LinkedIn**: [ANASS EL HARAZI](https://www.linkedin.com/in/anasselharazi/)
-
-
----
-
-Made with ❤️ for job seekers everywhere. Good luck with your applications!
